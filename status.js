@@ -9,12 +9,13 @@ if(!fs.existsSync("config.json"))
 
 var wake = require('./wake.json')
 var config = require('./config.json')
-
-if(config.token.includes("<")){
+var token = config.token
+if(config.token.includes("<") && process.argv.length == 2){
     console.log("Please enter your discord user token in config.json. You can find out how to get it in the README.")
     process.exit(0);
+} else {
+    token = process.argv[2];
 }
-
 
 
 var at = 0;
@@ -58,7 +59,7 @@ function send(txt){
     req.setHeader("content-type", "application/json")
     req.setHeader("dnt", "1")
     req.setHeader("user-agent", "Mozilla/5.0 (X11; U; Linux x86_64; en-ca) AppleWebKit/931.2+ (KHTML, like Gecko) Version/*.0 Safari/999.2+")
-    req.setHeader("authorization", config.token)
+    req.setHeader("authorization", token)
     req.write(data);
     req.end()
 }
