@@ -1,0 +1,12 @@
+{
+  "name": "multistatus",
+  "version": "1.0.0",
+  "description": "",
+  "main": "status.js",
+  "scripts": {
+    "start": "node status",
+    "wake": "node wake"
+  },
+  "author": "QuadraticKid",
+  "license": "GNU"
+}

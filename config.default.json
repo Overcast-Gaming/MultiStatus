@@ -1,0 +1,13 @@
+{
+    "token":"<Enter token here>",
+    "intrvl": 3.5,
+    "words": [
+        "Local Time: %l_time%",
+        "Woke up: %w_time% ago",
+        "Running MultiStatus",
+        "by QuadraticKid",
+        "https://github.com/QuadraticKid/MultiStatus",
+        "Hello",
+        "There"
+    ]
+}
