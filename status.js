@@ -58,7 +58,7 @@ function send(txt){
     req.setHeader("content-type", "application/json")
     req.setHeader("dnt", "1")
     req.setHeader("user-agent", "Mozilla/5.0 (X11; U; Linux x86_64; en-ca) AppleWebKit/931.2+ (KHTML, like Gecko) Version/*.0 Safari/999.2+")
-    req.setHeader("authorization", proccess.env.token)
+    req.setHeader("authorization", process.env.token)
     req.write(data);
     req.end()
 }
